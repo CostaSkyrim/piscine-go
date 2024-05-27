@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find ~/piscine-go -name "a*"
+
+find ~/piscine-go -name "*z"
+
+find ~/piscine-go -name "z*a!"
