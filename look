@@ -1,0 +1,7 @@
+#!/bin/bash
+
+find . -iname "a*"
+
+find . -iname "*z"
+
+find . -iname "z*a!"
