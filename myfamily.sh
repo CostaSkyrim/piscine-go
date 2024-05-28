@@ -10,4 +10,4 @@ fi
 PREV_HERO_ID=$((HERO_ID - 1))
 
 # Fetch the JSON and use jq to extract the relatives
-curl -s "https://platform.zone01.gr/assets/superhero/all.json" | jq -r --arg HERO_ID "$PREV_HERO_ID" '.[$HERO_ID | tonumber] | .connections.relatives'
+curl -s "https://platform.zone01.gr/assets/superhero/all.json" | jq -r --argjson HERO_ID "$PREV_HERO_ID" '.[$HERO_ID] | .connections.relatives'
