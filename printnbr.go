@@ -10,7 +10,7 @@ func PrintNbr(n int) {
 		printChar('0')
 		return
 	}
-	if value == -1<<31 {
+	if n == -1<<31 {
 		printChar('-')
 		printChar('9')
 		printChar('2')
