@@ -14,10 +14,9 @@ func PrintNbr(n int) {
 		printChar('-')
 		n = -n
 	}
-	if n == 1<<31 {
+	if n == -9223372036854775808 {
 		printChar('9')
-		n /= 10
-		n = -n
+		n = 223372036854775808
 	}
 	var digits []rune
 	for n > 0 {
