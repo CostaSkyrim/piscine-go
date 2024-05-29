@@ -10,12 +10,31 @@ func PrintNbr(n int) {
 		printChar('0')
 		return
 	}
+	if value == -1<<31 {
+		printChar('-')
+		printChar('9')
+		printChar('2')
+		printChar('2')
+		printChar('3')
+		printChar('3')
+		printChar('7')
+		printChar('2')
+		printChar('0')
+		printChar('3')
+		printChar('6')
+		printChar('8')
+		printChar('5')
+		printChar('4')
+		printChar('7')
+		printChar('7')
+		printChar('5')
+		printChar('8')
+		printChar('0')
+		printChar('8')
+		return
+	}
 	if n < 0 {
 		printChar('-')
-		if n == -1<<31 {
-			printChar('2')
-			n %= 1000000000
-		}
 		n = -n
 	}
 	var digits []rune
