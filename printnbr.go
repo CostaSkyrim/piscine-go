@@ -12,8 +12,11 @@ func PrintNbr(n int) {
 	}
 	if n < 0 {
 		printChar('-')
+		if n == -1<<31 {
+			printChar('2')
+			n %= 1000000000
+		}
 		n = -n
-	} else {
 	}
 	var digits []rune
 	for n > 0 {
