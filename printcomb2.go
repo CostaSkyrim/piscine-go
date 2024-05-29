@@ -5,8 +5,13 @@ import "github.com/01-edu/z01"
 func PrintComb2() {
 	for a := '0'; a <= '9'; a++ {
 		for b := '0'; b <= '9'; b++ {
-			d := b + 1
 			for c := a; c <= '9'; c++ {
+				var d rune
+				if a == c {
+					d = b + 1
+				} else {
+					d = '0'
+				}
 				for d <= '9' {
 					z01.PrintRune(a)
 					z01.PrintRune(b)
