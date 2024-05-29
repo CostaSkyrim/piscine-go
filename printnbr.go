@@ -6,13 +6,14 @@ func PrintNbr(n int) {
 	printChar := func(c rune) {
 		z01.PrintRune(c)
 	}
-	if n < 0 {
-		printChar('-')
-		n = -n
-	}
 	if n == 0 {
 		printChar('0')
 		return
+	}
+	if n < 0 {
+		printChar('-')
+		n = -n
+	} else {
 	}
 	var digits []rune
 	for n > 0 {
