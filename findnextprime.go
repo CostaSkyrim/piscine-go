@@ -23,7 +23,7 @@ func isPrime(nb int) bool {
 	if nb%2 == 0 {
 		return false // Any other even number is not a prime number
 	}
-	sqrtN := intSqrt(nb) // Calculate the square root of n using integer method
+	sqrtN := intSqrt(nb)             // Calculate the square root of n using integer method
 	for i := 3; i <= sqrtN; i += 2 { // Check only odd numbers from 3 to sqrt(n)
 		if nb%i == 0 {
 			return false // If n is divisible by any number, it is not prime
