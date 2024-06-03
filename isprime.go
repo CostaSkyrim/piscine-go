@@ -6,7 +6,7 @@ func IsPrime(nb int) bool {
 	if nb <= 1 {
 		return false
 	}
-	if nb % 2 == 0 {
+	if nb%2 == 0 {
 		return false
 	}
 	sqrtN := int(math.Sqrt(float64(nb)))
