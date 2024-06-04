@@ -14,11 +14,6 @@ func Capitalize(s string) string {
 
 		if !isLetter(char) {
 			wordStart = true
-		} else {
-			// Check if the previous character was not a letter
-			if i > 0 && !isLetter(chars[i-1]) {
-				wordStart = true
-			}
 		}
 	}
 
