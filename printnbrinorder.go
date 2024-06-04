@@ -8,7 +8,6 @@ func PrintNbrInOrder(n int) {
 	}
 	if n == 0 {
 		z01.PrintRune('0')
-		z01.PrintRune('\n')
 		return
 	}
 	digits := []rune{}
@@ -21,7 +20,6 @@ func PrintNbrInOrder(n int) {
 	for _, digit := range digits {
 		z01.PrintRune(digit)
 	}
-	z01.PrintRune('\n')
 }
 
 func bubbleSort(arr []rune) {
