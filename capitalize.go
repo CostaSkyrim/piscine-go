@@ -8,7 +8,7 @@ func Capitalize(s string) string {
 		if wordStart && isLetter(char) {
 			chars[i] = toUpper(char)
 			wordStart = false
-		} else {
+		} else if isLetter(char) {
 			chars[i] = toLower(char)
 		}
 
