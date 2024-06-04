@@ -11,8 +11,6 @@ func TrimAtoi(s string) int {
 		} else if c >= '0' && c <= '9' {
 			started = true
 			result = result*10 + int(c-'0')
-		} else if started {
-			break
 		}
 	}
 	return sign * result
@@ -29,7 +27,6 @@ func atoi(s string) int {
 			} else {
 				start = i
 			}
-			break
 		}
 	}
 	// Extract the substring containing only numeric characters
