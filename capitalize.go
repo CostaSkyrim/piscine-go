@@ -5,14 +5,14 @@ func Capitalize(s string) string {
 	wordStart := true
 
 	for i, char := range chars {
-		if wordStart && isLetter(char) {
+		if wordStart && isAlphanumeric(char) {
 			chars[i] = toUpper(char)
 			wordStart = false
-		} else if isLetter(char) {
+		} else if isAlphanumeric(char) {
 			chars[i] = toLower(char)
 		}
 
-		if !isLetter(char) {
+		if !isAlphanumeric(char) {
 			wordStart = true
 		}
 	}
@@ -21,8 +21,8 @@ func Capitalize(s string) string {
 }
 
 // isLetter checks if a rune is a letter
-func isLetter(r rune) bool {
-	return (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z')
+func isAlphanumeric(r rune) bool {
+	return (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z') || (r >= '0' && r <= '9')
 }
 
 // toUpper converts a lowercase letter to uppercase
