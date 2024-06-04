@@ -1,25 +1,47 @@
 package piscine
 
-import "unicode"
-
 func Capitalize(s string) string {
-	// Convert the string to a slice of runes
 	chars := []rune(s)
 	wordStart := true
-	// Loop through each character
+
 	for i, char := range chars {
-		// Capitalize the first letter of each word
-		if wordStart && unicode.IsLetter(char) {
-			chars[i] = unicode.ToUpper(char)
+		if wordStart && isLetter(char) {
+			chars[i] = toUpper(char)
 			wordStart = false
 		} else {
-			chars[i] = unicode.ToLower(char)
+			chars[i] = toLower(char)
 		}
-		// Update wordStart flag
-		if unicode.IsSpace(char) || !unicode.IsLetter(char) {
+
+		if isSpace(char) || !isLetter(char) {
 			wordStart = true
 		}
 	}
-	// Convert the slice of runes back to a string and return
+
 	return string(chars)
+}
+
+// isLetter checks if a rune is a letter
+func isLetter(r rune) bool {
+	return (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z')
+}
+
+// isSpace checks if a rune is a space
+func isSpace(r rune) bool {
+	return r == ' ' || r == '\t' || r == '\n' || r == '\r'
+}
+
+// toUpper converts a lowercase letter to uppercase
+func toUpper(r rune) rune {
+	if r >= 'a' && r <= 'z' {
+		return r - 32
+	}
+	return r
+}
+
+// toLower converts an uppercase letter to lowercase
+func toLower(r rune) rune {
+	if r >= 'A' && r <= 'Z' {
+		return r + 32
+	}
+	return r
 }
