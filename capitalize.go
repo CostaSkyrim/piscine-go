@@ -12,7 +12,7 @@ func Capitalize(s string) string {
 			chars[i] = toLower(char)
 		}
 
-		if isSpace(char) || !isLetter(char) {
+		if !isLetter(char) {
 			wordStart = true
 		}
 	}
@@ -23,11 +23,6 @@ func Capitalize(s string) string {
 // isLetter checks if a rune is a letter
 func isLetter(r rune) bool {
 	return (r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z')
-}
-
-// isSpace checks if a rune is a space
-func isSpace(r rune) bool {
-	return r == ' ' || r == '\t' || r == '\n' || r == '\r'
 }
 
 // toUpper converts a lowercase letter to uppercase
