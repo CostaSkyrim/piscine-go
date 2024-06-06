@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	args:= os.Args[1:]
+	args := os.Args[1:]
 
 	for _, arg := range args {
 		for _, r := range arg {
