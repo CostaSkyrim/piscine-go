@@ -9,7 +9,7 @@ func AppendRange(min, max int) []int {
 	result := []int{}
 
 	for i := 0; i < length; i++ {
-		result = append(result, min + i)
+		result = append(result, min+i)
 	}
 
 	return result
