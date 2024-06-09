@@ -8,6 +8,7 @@ func SplitWhiteSpaces(s string) []string {
 		if isSeparator(s[i]) {
 			if wordStart != -1 {
 				words = append(words, s[wordStart:i])
+
 				wordStart = -1
 			}
 		} else if wordStart == -1 {
