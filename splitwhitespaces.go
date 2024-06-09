@@ -10,7 +10,7 @@ func SplitWhiteSpaces(s string) []string {
 			// if we've encountered a word before, add it to the result
 			if wordStart != -1 {
 				words = append(words, s[wordStart:i])
-			       wordStart = -1 // Reset wordStart
+				wordStart = -1 // Reset wordStart
 			}
 		} else if wordStart == -1 {
 			// Start of a new word
