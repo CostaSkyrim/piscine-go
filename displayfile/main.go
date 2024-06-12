@@ -17,7 +17,7 @@ func main() {
 		}
 		arr := make([]byte, 24)
 		file.Read(arr)
-		fmt.Printf(string(arr))
+		fmt.Println("Almost there!!")
 		file.Close()
 	} else {
 		fmt.Println("File name missing")
