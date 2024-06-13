@@ -28,6 +28,5 @@ func ShoppingSummaryCounter(str string) map[string]int {
 	if currentItem != "" {
 		itemCount[currentItem]++
 	}
-
 	return itemCount
 }
