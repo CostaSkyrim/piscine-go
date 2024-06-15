@@ -9,6 +9,6 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 	return true
 }
 
-func isSortedBy1(a, b int) int {
+func compare(a, b int) int {
 	return a - b
 }
